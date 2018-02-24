@@ -1,6 +1,6 @@
 package models;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
+import models.enums.Desplazamiento;
 import models.enums.Genero;
 
 import java.awt.*;
@@ -12,6 +12,7 @@ public class Animal {
     private Double peso;
     private Double altura;
     private Boolean hiberna;
+    private Desplazamiento desplazamiento;
 
     //Siempre debe ir un constructor en blanco a menos que se quiera inicializar las variables con datos predefinidos
     public Animal(){
@@ -20,6 +21,7 @@ public class Animal {
         this.peso = 0.1d;
         this.altura = 0.1d;
         this.hiberna = Boolean.FALSE;
+        this.desplazamiento = Desplazamiento.TERRESTRE;
         //A las clases que contienen otras clases se llaman wrappers
         //double = primitivo
         //Double = clase
@@ -30,6 +32,7 @@ public class Animal {
     public Animal(Genero genero){
         this();
         this.setGenero(genero);
+
     }
 
     //Constructor que pide un valor para genero, color
@@ -47,6 +50,11 @@ public class Animal {
     public Animal(Genero genero, Color color, Double peso, Double altura){
         this(genero, color, peso);
         this.setAltura(altura);
+    }
+
+    public Animal(Genero genero, Color color, Double peso, Double altura, Desplazamiento desplazamiento){
+        this(genero, color, peso, altura);
+        this.setDesplazamiento(desplazamiento);
     }
 
     public Genero getGenero() {
@@ -87,5 +95,18 @@ public class Animal {
 
     public void setHiberna(Boolean hiberna) {
         this.hiberna = hiberna;
+    }
+
+    public Desplazamiento getDesplazamiento() {
+        return desplazamiento;
+    }
+
+    public void setDesplazamiento(Desplazamiento desplazamiento) {
+        this.desplazamiento = desplazamiento;
+    }
+
+    @Override
+    public String toString(){
+        return String.format("Hola soy un animal y mi genero es: %s - Tengo una altura de: %s cm - Y mi peso es: %s ton.", this.genero, this.altura, this.peso);
     }
 }

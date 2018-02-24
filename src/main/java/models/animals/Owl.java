@@ -1,5 +1,7 @@
 package models.animals;
 
+import models.enums.Desplazamiento;
+import models.enums.Pico;
 import models.subtypes.Herbivorous;
 
 /**
@@ -9,4 +11,13 @@ import models.subtypes.Herbivorous;
  * @version 1.0
  */
 public class Owl extends Herbivorous{
+
+    private Pico pico;
+    /**
+     * Constructor de un buho
+     */
+    public Owl(){
+        this.pico = Pico.CORVO;
+        this.setDesplazamiento(Desplazamiento.AEREO);
+    }
 }

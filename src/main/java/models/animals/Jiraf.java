@@ -9,4 +9,12 @@ import models.subtypes.Herbivorous;
  * @version 1.0
  */
 public class Jiraf extends Herbivorous{
+
+    private Integer tamañoCuello;
+    /**
+     * Constructor de un Jiraf
+     */
+    public Jiraf(){
+        this.tamañoCuello = 1;
+    }
 }

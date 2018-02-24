@@ -9,4 +9,11 @@ import models.subtypes.Carnivorous;
  * @version 1.0
  */
 public class Monkey extends Carnivorous{
+
+    /**
+     * Constructor de un mono
+     */
+    public Monkey(){
+        
+    }
 }

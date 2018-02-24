@@ -9,4 +9,11 @@ import models.subtypes.Herbivorous;
  * @version 1.0
  */
 public class Hipo extends Herbivorous{
+
+    /**
+     * Constructor de un mono
+     */
+    public Hipo(){
+
+    }
 }

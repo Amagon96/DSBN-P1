@@ -12,4 +12,10 @@ import models.Animal;
 
 public class Herbivorous extends Animal{
 
+    /**
+     * Constructor de un mono
+     */
+    public Herbivorous(){
+
+    }
 }

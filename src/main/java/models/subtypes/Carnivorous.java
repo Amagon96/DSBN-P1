@@ -9,4 +9,11 @@ import models.Animal;
  * @version 1.0
  */
 public class Carnivorous extends Animal{
+
+    /**
+     * Constructor de un carnivoro
+     */
+    public Carnivorous(){
+
+    }
 }
